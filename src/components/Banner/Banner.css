@@ -1,0 +1,59 @@
+.banner {
+  width: 100%;
+  color: white;
+  text-align: center;
+  border-radius: 2px;
+  display: flex;
+  padding: 14px 0px;
+  align-items: center;
+  gap: 32px;
+  align-self: stretch;
+  border: 1px solid var(--border-default, rgba(218, 197, 167, 0.15));
+  background: rgba(218, 197, 167, 0.10);
+  overflow: hidden; 
+}
+
+.banner, .banner * {
+  box-sizing: border-box;
+}
+
+.banner p {
+  display: inline-block;
+  white-space: nowrap;
+  color: var(--text-default, rgba(218, 197, 167, 0.10));
+  font-family: "Satoshi";
+  font-size: 13px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 160%;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  opacity: 0;
+}
+
+
+.banner-icon {
+  margin-right: 32px; 
+}
+
+.icon-separator {
+  margin-right: 32px;
+  background-color: rgba(218, 197, 167, 0.10);
+}
+
+
+/* Media Query for Mobile Devices */
+@media (max-width: 768px) {
+  .banner {
+    padding: 24px 0px; /* Reduced padding for smaller height */
+  }
+  .banner-icon {
+    width: 45px; /* Adjusted width for smaller icons */
+    height: 45px; /* Adjusted height for smaller icons */
+    margin-right: 10px; /* Optional: Adjust margin if needed */
+  }
+
+  .banner p{
+    margin-right: 10px;
+  }
+}

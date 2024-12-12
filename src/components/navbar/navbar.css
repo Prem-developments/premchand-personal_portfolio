@@ -1,0 +1,178 @@
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400..900&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Jost:ital,wght@0,100..900;1,100..900&family=Karla:ital,wght@0,200..800;1,200..800&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Playwrite+GB+S+Guides:ital@0;1&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&family=Saira:ital,wght@0,100..900;1,100..900&display=swap');
+.nav-bar {
+  display: flex;
+  width: 40vw; /* Start with the smallest width */
+  height: 3rem;
+  padding: 12px;
+  justify-content: space-between;
+  align-items: center;
+  gap: 42px;
+  position: fixed;
+  top: 15px;
+  left: 50%;
+  transform: translateX(-50%);
+  border-radius: 2px;
+  border: 1px solid var(--border-default, rgba(218, 197, 167, 0.15));
+  background: var(--background-muted, rgba(218, 197, 167, 0.05));
+  backdrop-filter: blur(15px);
+  z-index: 500;
+}
+.logo{
+  font-family: "Saira", serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+  font-variation-settings:
+    "wdth" 100;
+  font-size: 46px;
+  color: #DAC5A7;
+  text-align: center;
+  margin-bottom: 35px;
+}
+
+.nav-bar p  {
+  color: var(--text-default, #DAC5A7);
+  font-family: "Satoshi";
+  font-size: 13px; 
+  font-style: normal;
+  font-weight: 400;
+  line-height: 160%;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+
+
+.nav-bar p:hover {
+  opacity: 0.7; 
+  transition: opacity 0.3s ease-in-out;
+}
+
+.hamburger {
+  position: relative;
+  display: block;
+  width: 40px; 
+  height: 40px; 
+  cursor: pointer;
+}
+
+.hamburger img {
+  width: 100%;
+  height: auto;
+  transition: transform 1s ease, opacity 0.1s ease;
+}
+
+.hamburger.open img {
+  transform: rotate(180deg);
+  opacity: 0;
+}
+
+.hamburger::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 100%;
+  height: 100%;
+  background-image: url('/icons/cross.svg');
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  transform: translate(-50%, -50%) rotate(0deg);
+  opacity: 0;
+  transition: transform 1s ease, opacity 0.4s ease;
+}
+
+.hamburger.open::after {
+  opacity: 1;
+  transform: translate(-50%, -50%) rotate(180deg);
+}
+
+.hamburger:not(.open)::after {
+  transform: translate(-50%, -50%) rotate(0deg);
+  opacity: 0; 
+}
+
+.hamburger.open:hover img {
+  opacity: 0; 
+}
+
+.hamburger.open:hover::after {
+  opacity: 0.7;
+}
+
+.hamburger:hover img {
+  opacity: 0.7;
+}
+
+.nav-items {
+  display: flex;
+  gap: 42px;
+}
+
+.menu-contact-container {
+  display: none;
+}
+
+@media (max-width: 1200px) {
+  .nav-bar { width: 50vw; }
+}
+@media (max-width: 1024px) {
+  .nav-bar { width: 60vw; }
+
+  .primary-button{
+    padding: 5% 5px;
+    font-size: 2.5vw; 
+  }
+}
+
+@media (max-width: 800px) {
+  .nav-bar { width: 80vw; }
+  .nav-items, .primary-button { display: none; }
+  .nav-items.show {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    width: calc(100% - 30px); 
+    top: calc(3rem + 15px + 20px); /* Navbar height + top position + navbar padding */
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 1rem;
+    gap: 7px;
+    border: 1px solid var(--border-default, rgba(218, 197, 167, 0.15));
+    background: var(--background-muted, rgb(24, 23, 22));
+    justify-content: center;
+    align-items: center;
+    z-index: 500;
+  }
+  .nav-items.show .primary-button { width: 80%; margin: 0 auto; }
+  .hamburger { display: block; }
+
+  .hamburger img {
+    transition: opacity 0.5s ease-in-out;
+    margin-top: 7.5px;
+    width: 30vw; 
+    height: auto;
+    max-width: 30px; 
+  }
+  .menu-contact-container { display: flex; align-items: center; justify-content: center; gap: 15px; }
+}
+
+@media (max-width: 480px) {
+  .nav-bar { width: 80vw; }
+
+  .menu-contact-container .primary-button, .nav-items.show .primary-button {
+    padding: 5% 5px;
+    font-size: 2.5vw; 
+  }
+  .logo { width: 30%; height: auto; }
+
+  .hamburger img {
+    transition: opacity 0.5s ease-in-out;
+    margin-top: 7.5px;
+    width: 20vw; 
+    height: auto;
+    max-width: 30px; 
+  }
+  
+}

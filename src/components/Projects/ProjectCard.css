@@ -1,0 +1,217 @@
+  .image-wrapper {
+    align-self: stretch;
+    /* background-image: url('/public/icons/project-1.png'); */
+    background-position: 50% 50%;
+    background-size: cover;
+    border: 2px solid;
+    /* border-color: var(--borderdefault); */
+    border-color: #dac5a7;
+    border-radius: 2px;
+    height: 513px;
+    overflow: hidden;
+    position: relative;
+    width: 100%;
+    transition: transform 0.3s ease, box-shadow 0.3s ease; 
+  }
+
+  .image-wrapper:hover {
+    transform: scale(1.05); 
+    transition: transform 0.3s ease, box-shadow 0.3s ease; 
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2); 
+  }
+  
+.overlap-group {
+    background-image: url(./noise.png);
+    background-size: 100% 100%;
+    height: 00px;
+    width: 700px;
+  }
+  
+  .div {
+    -webkit-backdrop-filter: blur(30px) brightness(100%);
+    backdrop-filter: blur(30px) brightness(100%);
+    background-color: #000000;
+    border: 1px solid;
+    border-color: #ffffff26;
+    border-radius: 2px;
+    display: flex;
+    justify-content: space-between;
+    padding: 16px;
+    position: absolute;
+    top: 82.5%;
+    left: 50%; 
+    transform: translateX(-50%); 
+    width: 90%;
+    align-items: center;
+
+}
+  
+.text-wrapper {
+    color: var(--textdefault);
+    font-family: var(--heading-h4-font-family);
+    font-size: var(--heading-h4-font-size);
+    font-style: var(--heading-h4-font-style);
+    font-weight: var(--heading-h4-font-weight);
+    letter-spacing: var(--heading-h4-letter-spacing);
+    line-height: var(--heading-h4-line-height);
+    margin-top: -1px;
+    position: relative;
+    white-space: nowrap;
+    width: fit-content;
+  }
+  
+  .webdesign {
+    color: var(--textdefault);
+    font-family: var(--text-meta-font-family);
+    font-size: var(--text-meta-font-size);
+    font-style: var(--text-meta-font-style);
+    font-weight: var(--text-meta-font-weight);
+    letter-spacing: var(--text-meta-letter-spacing);
+    line-height: var(--text-meta-line-height);
+    text-transform: uppercase;
+    position: relative;
+    white-space: nowrap;
+    width: fit-content;
+  }
+
+  @media (min-width: 1024px) {
+    .image-wrapper {
+      height: 70vh; 
+      max-height: 600px; 
+    }
+  
+    .overlap-group {
+      width: 42vw; 
+      max-width: 1000px; 
+      height: auto; 
+    }
+
+
+  }
+
+  
+@media (max-width: 1024px) {
+  .image-wrapper {
+    height: 70vh; 
+    max-height: 600px; 
+  }
+
+  .overlap-group {
+    width: 40vw; 
+    max-width: 1000px; 
+    height: auto; 
+  }
+
+  .div {
+    width: 85%;
+    padding: 14px; 
+  }
+
+  .text-wrapper {
+    font-size: calc(var(--heading-h4-font-size) * 0.9); 
+  }
+
+  .webdesign {
+    font-size: calc(var(--text-meta-font-size) * 0.85); 
+  }
+}
+
+@media (max-width: 925px) {
+
+  .text-wrapper {
+    font-size: calc(var(--heading-h4-font-size) * 0.8); 
+  }
+
+  .webdesign {
+    font-size: calc(var(--text-meta-font-size) * 0.8); 
+  }
+}
+
+@media (max-width: 860px) {
+
+  .text-wrapper {
+    font-size: calc(var(--heading-h4-font-size) * 0.75); 
+  }
+
+  .webdesign {
+    font-size: calc(var(--text-meta-font-size) * 0.75); 
+  }
+}
+
+
+
+@media (max-width: 768px) {
+  .image-wrapper {
+    height: 70vh;
+  }
+
+  .overlap-group {
+    width: 80vw; 
+    height: auto; 
+  }
+
+  .div {
+    width: 85%;
+    padding: 14px; 
+  }
+
+  .text-wrapper {
+    font-size: calc(var(--heading-h4-font-size) * 0.9); 
+  }
+
+  .webdesign {
+    font-size: calc(var(--text-meta-font-size) * 0.9); 
+  }
+}
+
+
+@media (max-width: 426px) {
+  .image-wrapper {
+    height: 60vh;
+  }
+
+  .overlap-group {
+    width: 85vw; 
+    height: auto; 
+  }
+
+  .div {
+    width: 82.5%;
+    padding: 13px; 
+    top:80%;
+  }
+
+  .text-wrapper {
+    font-size: calc(var(--heading-h4-font-size) * 0.7); 
+  }
+
+  .webdesign {
+    font-size: calc(var(--text-meta-font-size) * 0.75); 
+  }
+}
+
+
+@media (max-width: 321px) {
+  .image-wrapper {
+    height: 49vh;
+  }
+
+  .overlap-group {
+    width: 85vw; 
+    height: auto; 
+  }
+
+  .div {
+    width: 82.5%;
+    padding: 13px; 
+    top:80%;
+  }
+
+  .text-wrapper {
+    font-size: calc(var(--heading-h4-font-size) * 0.55); 
+  }
+
+  .webdesign {
+    font-size: calc(var(--text-meta-font-size) * 0.55); 
+  }
+}

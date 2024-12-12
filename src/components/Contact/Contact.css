@@ -1,0 +1,257 @@
+.Container {
+    display: flex;
+    justify-content: center;
+    min-height: 100vh; 
+  }
+  
+  .input, .textarea {
+    width: 95%;
+    padding: 12px;
+    border: 1px solid var(--border-default, rgba(218, 197, 167, 0.15));
+    background: var(--background-muted, rgba(218, 197, 167, 0.05));
+    color: var(--text-default, #DAC5A7);
+    font-family: "Satoshi";
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 160%; 
+    letter-spacing: 1.5px;
+  }
+
+  .input::placeholder, .textarea::placeholder {
+    color: var(--text-default);
+    font-family: Satoshi;
+    font-size: 13px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 160%; 
+    letter-spacing: 1.5px;
+    text-transform: uppercase;  
+    opacity: 40%;
+  }
+  
+  .textarea {
+    height: 150px;
+    resize: vertical; 
+    margin-bottom: 5px;
+  }
+  
+  .sendButton {
+    display: flex;
+    padding: 15px;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+    width: 99%;
+    border-radius: 2px;
+    background: var(--background-primary, #DAC5A7);
+    color: var(--text-inverse, #0E0E0E);
+    font-family: "Satoshi";
+    font-size: 15px;
+    font-style: bold;
+    font-weight: 700;
+    line-height: 160%; 
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+  }
+
+
+.Grid{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+    flex-shrink: 0;
+    width: 50%;
+}
+form{
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.Card{
+    display: flex;
+    padding: 48px;
+    flex-direction: column;
+    margin-bottom: 7px;
+    justify-content: center;
+    gap: 20px;
+    align-self: stretch;
+    border-radius: 2px;
+    border: 1px solid var(--border-default, rgba(218, 197, 167, 0.15));
+    background: var(--background-muted, rgba(218, 197, 167, 0.05));
+    backdrop-filter: blur(15px);
+}
+
+.heading3{
+
+    color: var(--text-default, #DAC5A7);
+    align-self: stretch;
+    font-family: "Satoshi";
+    font-size: 3.5rem;
+    font-style:normal;
+    letter-spacing: 1.5px;
+}
+
+
+@media (max-width: 768px) {
+    .heading2 {
+        font-size: 4rem;
+    }
+    
+}
+
+@media(max-width:376px){
+    .heading2{
+        font-size: 3.5rem;
+    }
+}
+
+
+@media (max-width: 1024px) {
+    .Grid {
+      width: 70%; 
+    }
+
+    .sendButton{
+        width: 100%;
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .Grid {
+      width: 75%; 
+    }
+    .Card {
+      padding: 24px; 
+      gap: 15px; 
+    }
+    .input, .textarea {
+      width: 96%; 
+    }
+
+    .sendButton{
+        width: 101%;
+    }
+    .input, .textarea, .sendButton { 
+      font-size: 16px; 
+    }
+
+    .heading3{
+        font-size: 3rem;
+    
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .Grid {
+      width: 90%;
+    }
+    .Card {
+      padding: 14px; 
+      gap: 15px; 
+    }
+     .input, .textarea {
+      width: 90%;
+      font-size: 14px;
+    }
+    .sendButton{
+        width: 99%;
+    }
+    .heading3{
+        font-size: 2.5rem;
+    }
+  }
+
+
+  .linkButtons {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    gap: 20px; 
+  }
+  
+  .linkButton {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: calc(50% - 10px);
+    padding: 15px;
+    text-align: center;
+    border-radius: 2px;
+    border: 1px solid var(--border-default, rgba(218, 197, 167, 0.15));
+    background: var(--background-muted, rgba(218, 197, 167, 0.05));
+    backdrop-filter: blur(15px);
+    text-decoration: none;
+    font-family: "Satoshi";
+    font-size: 13px;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    cursor: pointer;
+    color: var(--text-default, #DAC5A7);
+  }
+
+  
+  .linkButton:hover {
+    background: var(--background-primary, #DAC5A7);
+    color: var(--text-inverse, #0E0E0E);
+  }
+  
+  .linkButton:hover img {
+    filter: brightness(0) saturate(100%) invert(5%) sepia(70%) hue-rotate(-180deg) brightness(90%) contrast(90%);
+  }
+  .arrowIcon {
+    transition: transform 0.3s ease-in-out; 
+    transform: rotate(45deg);
+  }
+  
+  .linkButton:hover .arrowIcon {
+    transform: rotate(-15deg);
+  }
+
+
+  .contentStart {
+    display: flex;
+    align-items: center;
+  }
+  
+  .contentStart img {
+    margin-right: 20px; 
+  }
+  
+  
+  .linkButton img {
+    flex-shrink: 0;
+  }
+  
+  @media (max-width: 768px) {
+
+    .Grid{
+      margin-bottom: 50px;
+
+    }
+
+    .Card{
+        margin-bottom: 6px;
+    }
+    .linkButtons {
+        flex-direction: column;
+      }
+
+    .linkButton {
+      padding: 15px;
+      width: 95%; 
+    }
+    .linkButton img, .linkButton span {
+      margin: 0 5px; 
+    }
+  }
+
+    @media (max-width: 480px) {
+        .linkButton {
+        padding: 10px;
+        width: 95%;
+        }
+    }
+
+

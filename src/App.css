@@ -1,0 +1,111 @@
+#root {
+  width: 100vw;
+  min-height: 100vh;
+  margin: 0 auto;
+  background: #0e0e0e;
+}
+
+/* App.css */
+body {
+  overflow-x: hidden; /* Prevent horizontal scrolling */
+}
+
+/* --------------  Text --------------------- */
+
+.heading {
+  color: #dac5a7;
+  text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25),
+    0px 4px 4px rgba(255, 255, 255, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25);
+  font-family: "Inter Tight";
+  font-size: 5rem;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  letter-spacing: -2.96px;
+}
+.subheading {
+  color: rgba(218, 197, 167, 0.6);
+  font-family: "Chillax";
+  font-size: 1.75rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  letter-spacing: -1.08px;
+}
+
+/* --------------  Buttons  --------------------- */
+.primary-button {
+  border-radius: 2px;
+  background: var(--background-primary, #dac5a7);
+  display: flex;
+  padding: 10px 16px;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  color: var(--text-inverse, #0e0e0e);
+  font-size: 13px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 160%;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+}
+
+.secondary-button {
+  display: inline-flex;
+  height: 59px;
+  padding: 10px 16px;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  flex-shrink: 0;
+  border-radius: 2px;
+  background: #1c2120;
+  color: #dac5a7;
+  font-family: "Satoshi";
+  font-size: 17px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 160%; /* 27.2px */
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+}
+
+.secondary-button:hover {
+  background: var(--background-primary, #dac5a7);
+  color: var(--text-inverse, #0e0e0e);
+}
+
+.secondary-button:hover img {
+  filter: brightness(0) saturate(100%) invert(20%) sepia(70%)
+    hue-rotate(-180deg) brightness(90%) contrast(90%);
+}
+
+/* --------------- containers and divs --------------- */
+
+@media (prefers-reduced-motion: no-preference) {
+  a:nth-of-type(2) .logo {
+    animation: logo-spin infinite 20s linear;
+  }
+}
+
+/* --------------- Breakpoints --------------- */
+
+/* large devices */
+@media screen and (max-width: 992px) {
+}
+
+/* medium devices */
+
+@media screen and (max-width: 768px) {
+}
+
+/* small devices */
+
+@media screen and (max-width: 576px) {
+}
+
+/* extra small devices */
+
+@media screen and (max-width: 350px) {
+}

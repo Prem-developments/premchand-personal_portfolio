@@ -1,0 +1,119 @@
+.timeline-item-container {
+    display: flex;
+    padding: 48px;
+    flex-direction: column;
+    align-items: flex-start;
+    flex: 1 0 0;
+    align-self: stretch;
+    border-radius: 2px;
+    border: 1px solid var(--border-default, rgba(218, 197, 167, 0.15));
+    background: var(--background-muted, rgba(218, 197, 167, 0.05));
+    backdrop-filter: blur(15px);
+
+}
+
+.timeline-heading {
+    color: var(--text-default, #DAC5A7);
+    font-family: "Satoshi";
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 300;
+    line-height: 130%;
+    letter-spacing: 5px;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+}
+
+.timeline-text {
+    color: var(--text-muted, rgba(218, 197, 167, 0.60));
+    font-family: "Chillax";
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 180%; 
+    margin-bottom: 5px;
+}
+
+.list {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 16px;
+    align-self: stretch;
+    list-style-type: disc; 
+    padding-left: 0; 
+    margin-left: 0; 
+}
+
+.list-item-text {
+    color: var(--text-default, #DAC5A7);
+    font-family: "Chillax";
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 180%;
+    margin-left: 20px; 
+}
+
+@media (max-width: 1024px) {
+
+    .timeline-item-container {
+        width: 90%;
+        padding: 2rem; 
+    }
+
+    .timeline-heading {
+        font-size: 24px; 
+    }
+    .timeline-text, .list-item-text {
+        font-size: 15px; 
+    }
+
+  }
+
+
+@media (max-width: 922px) {
+
+    .timeline-item-container {
+        margin-bottom: 35px;
+        padding: 24px; 
+    }
+    
+  }
+
+
+@media (max-width: 768px) {
+    .timeline-item-container {
+        margin-bottom: 35px;
+        padding: 24px;
+    }
+    .timeline-heading {
+        font-size: 20px;
+    }
+    .timeline-text, .list-item-text {
+        font-size: 14px; 
+    }
+}
+
+
+
+@media (max-width: 426px) {
+    .timeline-item-container {
+        width: 80%;
+        padding: 2rem; 
+    }
+    .timeline-heading {
+        font-size: 20px; 
+    }
+    .timeline-text, .list-item-text {
+        font-size: 13px; 
+    }
+}
+
+@media (max-width: 320px) {
+    .timeline-item-container {
+        width: 90%;
+        padding: 1rem; 
+    }
+
+}

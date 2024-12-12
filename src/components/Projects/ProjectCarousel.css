@@ -1,0 +1,40 @@
+.carousel {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); 
+    gap: 50px; 
+    padding: 20px 80px; 
+    justify-items: center; 
+    align-items: start; 
+}
+
+@media (max-width: 1025px) {
+    .carousel {
+        padding: 20px 75px;
+    }
+}
+
+@media (max-width: 768px) {
+    .carousel {
+        grid-template-columns: 1fr; 
+        padding: 20px 80px;
+    }
+}
+
+@media (max-width: 650px) {
+    .carousel {
+        padding: 20px 60px;
+    }
+}
+
+@media (max-width: 520px) {
+    .carousel {
+        padding: 20px 40px;
+    }
+}
+
+@media (max-width: 426px) {
+    .carousel {
+        padding: 5px 10px;
+        gap:25px;
+    }
+}
