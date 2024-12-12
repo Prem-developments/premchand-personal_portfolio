@@ -167,7 +167,7 @@
 
 @media (max-width: 426px) {
   .image-wrapper {
-    height: 60vh;
+    height: 400px;
   }
 
   .overlap-group {
